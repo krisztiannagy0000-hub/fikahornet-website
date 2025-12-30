@@ -1,4 +1,4 @@
-/* Reset och grundinställningar */
+/* Grundinställningar */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +6,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
     color: #4B3F36;
+    line-height: 1.6;
+    background-color: #FDF7F0;
 }
 
 /* Navigation */
@@ -20,36 +21,31 @@ nav {
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 700;
+    color: #7B5E57;
 }
 
-nav ul {
+nav ul.nav-links {
     display: flex;
     list-style: none;
+    gap: 25px;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
+nav ul.nav-links li a {
     text-decoration: none;
     color: #4B3F36;
-    font-weight: bold;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-nav .btn {
-    background-color: #7B5E57;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
+nav ul.nav-links li a:hover {
+    color: #7B5E57;
 }
 
 /* Hero */
@@ -59,45 +55,67 @@ nav .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
 .hero-text p {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.hero-text .btn {
+    background-color: #7B5E57;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* Features */
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 50px 10%;
-    background-color: #F5F0EB;
+    padding: 60px 10%;
+    background-color: #FDF7F0;
 }
 
 .feature {
     text-align: center;
-    max-width: 200px;
+    max-width: 220px;
 }
 
 .feature img {
-    width: 50px;
+    width: 64px;
     margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.feature p {
+    color: #6C584C;
 }
 
 /* Hours */
 .hours {
-    padding: 50px 10%;
+    padding: 60px 10%;
     text-align: center;
 }
 
 .hours h2 {
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -105,59 +123,22 @@ nav .btn {
 .about {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 10%;
-    align-items: center;
+    padding: 60px 10%;
     gap: 30px;
+    align-items: center;
 }
 
-.about img {
-    max-width: 400px;
-    border-radius: 10px;
+.about-text {
+    flex: 1 1 300px;
 }
 
-/* Contact */
-.contact {
-    padding: 50px 10%;
-    background-color: #F5F0EB;
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.about-image {
+    flex: 1 1 300px;
 }
 
-.contact-info {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact input, .contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    padding: 10px;
-    border: none;
-    background-color: #7B5E57;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    background-color: #4B3F36;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
+.
