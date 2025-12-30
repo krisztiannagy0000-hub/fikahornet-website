@@ -1,140 +1,163 @@
-/* Grundstil */
+/* Reset och grundinställningar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #121212;
-  color: #fff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #4B3F36;
 }
 
-/* Topbar */
-.topbar {
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(90deg, #1a1a1a, #333333);
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.topbar-item {
-  margin: 0 20px;
-  padding: 10px 15px;
-  background-color: #222;
-  border-radius: 6px;
-  font-weight: 600;
-  color: #ffdd57;
-  cursor: pointer;
-  transition: all 0.3s;
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.topbar-item:hover {
-  background-color: #ffdd57;
-  color: #121212;
-  transform: translateY(-2px);
+nav ul {
+    display: flex;
+    list-style: none;
 }
 
-/* Header / Hero */
-header.hero {
-  background: url('https://via.placeholder.com/1200x500?text=Café+Fika+Hörnet') center/cover no-repeat;
-  text-align: center;
-  padding: 120px 20px;
+nav ul li {
+    margin: 0 15px;
 }
 
-header.hero h1 {
-  font-size: 3rem;
-  color: #ffdd57;
+nav ul li a {
+    text-decoration: none;
+    color: #4B3F36;
+    font-weight: bold;
 }
 
-header.hero p {
-  font-size: 1.2rem;
-  color: #eee;
+nav .btn {
+    background-color: #7B5E57;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-/* Sektioner */
-section {
-  padding: 50px 20px;
-  text-align: center;
+/* Hero */
+.hero {
+    background: url('https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
 }
 
-section h2 {
-  font-size: 2rem;
-  color: #ffdd57;
-  margin-bottom: 20px;
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-#menu ul {
-  list-style: none;
-  padding: 0;
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-#menu li {
-  padding: 6px 0;
-  font-size: 1.1rem;
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #F5F0EB;
 }
 
-/* Galleri */
-.gallery-grid {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
+.feature {
+    text-align: center;
+    max-width: 200px;
 }
 
-.gallery-grid img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s;
+.feature img {
+    width: 50px;
+    margin-bottom: 15px;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
+/* Hours */
+.hours {
+    padding: 50px 10%;
+    text-align: center;
 }
 
-/* Formulär */
-form {
-  display: grid;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
+.hours h2 {
+    margin-bottom: 20px;
 }
 
-input, textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
+/* About */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 10%;
+    align-items: center;
+    gap: 30px;
 }
 
-button {
-  background: #ffdd57;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.3s;
+.about img {
+    max-width: 400px;
+    border-radius: 10px;
 }
 
-button:hover {
-  background: #e6c84f;
+/* Contact */
+.contact {
+    padding: 50px 10%;
+    background-color: #F5F0EB;
 }
 
-/* Karta */
-.map iframe {
-  width: 100%;
-  height: 250px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Öppettider */
-#hours p {
-  font-size: 1.1rem;
-  margin: 5px 0;
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px;
+    border: none;
+    background-color: #7B5E57;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #4B3F36;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
