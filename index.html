@@ -4,176 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Café Aroma</title>
-  <style>
-    /* Grundinställningar */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #fff8f0;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      background-color: #c49a6c;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-family: 'Georgia', serif;
-      font-size: 1.8rem;
-    }
-
-    nav a {
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #fff1e6;
-    }
-
-    .hero {
-      text-align: center;
-      background: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxjYWZlZXxlbnwwfHx8fDE2OTg1NzcyNjA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
-      color: white;
-      padding: 120px 20px;
-      font-size: 2rem;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: #7b4f2b;
-      text-align: center;
-    }
-
-    p {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .hours, .contact, .about, .menu {
-      background-color: #fff1e6;
-      border-radius: 10px;
-      padding: 40px 20px;
-      margin: 20px 0;
-    }
-
-    .menu-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .menu-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 250px;
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s;
-    }
-
-    .menu-card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    .menu-card:hover {
-      transform: scale(1.05);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    input, textarea {
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    button {
-      padding: 10px;
-      background-color: #c49a6c;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #a67b50;
-    }
-
-    footer {
-      background-color: #7b4f2b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 10px 0;
-      }
-
-      .hero {
-        font-size: 1.5rem;
-        padding: 80px 20px;
-      }
-
-      .menu-items {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <!-- Koppla till extern CSS-fil -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header och navigering -->
+  <!-- HEADER -->
   <header>
     <h1>Café Aroma</h1>
     <nav>
@@ -185,13 +20,13 @@
     </nav>
   </header>
 
-  <!-- Hem / Hero -->
+  <!-- HERO -->
   <section class="hero" id="hem">
     <h1>Välkommen till Café Aroma</h1>
     <p>Din plats för kaffe, kakor och mysiga stunder</p>
   </section>
 
-  <!-- Öppettider -->
+  <!-- ÖPPETTIDER -->
   <section class="hours" id="oppettider">
     <h2>Öppettider</h2>
     <p>Måndag - Fredag: 08:00 - 18:00</p>
@@ -199,56 +34,13 @@
     <p>Söndag: 10:00 - 16:00</p>
   </section>
 
-  <!-- Om oss -->
+  <!-- OM OSS -->
   <section class="about" id="om-oss">
     <h2>Om oss</h2>
     <p>Café Aroma grundades 2020 med visionen att skapa en plats där människor kan njuta av kvalitetskaffe, hembakat bröd och härlig atmosfär. Vi använder lokala råvaror och strävar efter hållbarhet i allt vi gör.</p>
     <p>Vi älskar kaffe, och vi älskar att se våra gäster le när de smakar våra bakverk. Välkommen in för en kopp värmande kaffe och en stund av lugn mitt i vardagen!</p>
   </section>
 
-  <!-- Meny -->
+  <!-- MENY -->
   <section class="menu" id="menu">
-    <h2>Vår Meny</h2>
-    <div class="menu-items">
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Kaffe">
-        <h3>Espresso</h3>
-        <p>25 kr – Stark och aromatisk espresso med fyllig smak</p>
-      </div>
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Latte">
-        <h3>Latte</h3>
-        <p>40 kr – Mjölkig kaffeupplevelse med krämigt skum</p>
-      </div>
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Croissant">
-        <h3>Croissant</h3>
-        <p>30 kr – Smörig, nybakad croissant perfekt till kaffet</p>
-      </div>
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1565958011700-44b5c4c3a350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Muffin">
-        <h3>Muffin</h3>
-        <p>35 kr – Saftig muffin med choklad eller blåbär</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Kontakt -->
-  <section class="contact" id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Skicka oss ett meddelande eller boka bord</p>
-    <form>
-      <input type="text" placeholder="Ditt namn" required>
-      <input type="email" placeholder="Din e-post" required>
-      <textarea rows="5" placeholder="Ditt meddelande" required></textarea>
-      <button type="submit">Skicka</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Café Aroma. Alla rättigheter reserverade.</p>
-    <p>Adress: Storgatan 1, 111 22 Stockholm | Telefon: 08-123 456 78</p>
-  </footer>
-</body>
-</html>
+    <h2>Vår Meny</h2
