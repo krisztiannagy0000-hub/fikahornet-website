@@ -1,4 +1,4 @@
-/* Grundinställningar */
+/* ALLMÄNT */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@ body {
   background-color: #fff8f0;
   color: #333;
   line-height: 1.6;
+  text-align: center; /* centrera allt textinnehåll */
 }
 
 a {
@@ -17,12 +18,13 @@ a {
   color: inherit;
 }
 
-/* HEADER & NAVIGATION */
+/* HEADER */
 header {
   background-color: #c49a6c;
   padding: 20px 40px;
-  text-align: center;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -30,32 +32,28 @@ header {
 
 header h1 {
   font-family: 'Georgia', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 nav {
-  display: inline-block;
-}
-
-nav a {
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #fff1e6;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
   background: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
   color: white;
   padding: 120px 20px;
   font-size: 2rem;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* SEKCIONER */
@@ -63,8 +61,67 @@ section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
 }
 
-h2 {
-  mar
+/* ÖPPETTIDER & OM OSS */
+.hours, .about {
+  background-color: #fff1e6;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 20px 0;
+}
+
+/* MENY */
+.menu {
+  background-color: #fff1e6;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 20px 0;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.menu-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+/* KONTAKT */
+.contact {
+  background-color: #fff1e6;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius:
