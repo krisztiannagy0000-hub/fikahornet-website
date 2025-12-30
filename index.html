@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fika Hörnet Göteborg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Fika Hörnet Göteborg</h1>
+    <p>Mysigt konditori & café i Göteborg</p>
+  </header>
+
+  <section id="about">
+    <h2>Om oss</h2>
+    <p>Fika Hörnet är ett konditori och café på Gustaf Dalénsgatan i Göteborg som erbjuder kaffe, bakverk och söta klassiker i en mysig miljö där alla är välkomna.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Meny & Priser</h2>
+    <ul>
+      <li>Dome Choklad – 47 kr</li>
+      <li>Eclair Vanilj – 47 kr</li>
+      <li>Tiramisu – 74 kr</li>
+      <li>Drycker (läsk/juice) från 29 kr</li>
+    </ul>
+    <p><em>Mer kaffe och fika finns på plats!</em></p>
+  </section>
+
+  <section id="gallery">
+    <h2>Galleri</h2>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/300x200?text=Fika+1" alt="Bild på fika">
+      <img src="https://via.placeholder.com/300x200?text=Fika+2" alt="Bakverk">
+      <img src="https://via.placeholder.com/300x200?text=Cafe+interior" alt="Caféets interiör">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Adress: Gustaf Dalénsgatan 9E, 417 24 Göteborg</p>
+    <p>Telefon: +46 72 254 5555</p>
+    <p>Email: fikahornet@gmail.com</p>
+
+    <form action="https://formspree.io/f/mwkajnly" method="POST">
+      <label for="name">Namn:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E‑post:</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">Meddelande:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Skicka</button>
+    </form>
+
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=Gustaf%20Dal%C3%A9nsgatan%209E%2C%20Göteborg&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+</body>
+</html>
